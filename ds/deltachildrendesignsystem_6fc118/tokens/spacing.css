@@ -1,0 +1,60 @@
+/* ============================================================
+   Delta Children — Spacing, radii, shadows, layout
+   Spacing scale steps in multiples of 4 (brand rule).
+   ============================================================ */
+
+:root {
+  /* ---- Spacing scale (+4) ---- */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ---- Radii ---- */
+  --radius-xs: 2px;   /* sections / hairline chips */
+  --radius-sm: 4px;
+  --radius-md: 8px;   /* buttons, cards, inputs (brand default) */
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px; /* modals / large overlay dialogs */
+  --radius-pill: 999px; /* swatches, round nav buttons, tags */
+
+  /* ---- Borders ---- */
+  --border-width: 1px;
+  --border-width-strong: 2px; /* secondary button outline */
+
+  /* ---- Elevation ---- */
+  /* Layered ambient shadow used on floating UI (matches Figma button stack) */
+  --shadow-ambient:
+    0px 3.381px 10.017px 0px rgba(0, 0, 0, 0.035),
+    0px 1.796px 5.32px 0px rgba(0, 0, 0, 0.0283),
+    0px 0.747px 2.214px 0px rgba(0, 0, 0, 0.0197);
+  /* Soft card shadow */
+  --shadow-card: 0px 4px 16px 0px rgba(0, 0, 0, 0.06);
+  /* Primary button: blue glow + ambient stack */
+  --shadow-primary: 0px 0px 15px 0px var(--glow-blue), var(--shadow-ambient);
+  /* Lifted hover */
+  --shadow-hover: 0px 8px 24px 0px rgba(0, 0, 0, 0.1);
+
+  /* ---- Layout ---- */
+  --container-max: 1360px;  /* desktop content frame */
+  --container-pad: 40px;    /* desktop gutter */
+  --container-pad-mobile: 16px;
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --duration-fast: 120ms; /* @kind other */
+  --duration-base: 200ms; /* @kind other */
+  --duration-slow: 320ms; /* @kind other */
+}

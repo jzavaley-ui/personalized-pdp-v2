@@ -1,0 +1,81 @@
+/* ============================================================
+   Delta Children — Color tokens
+   Source of truth: Figma "Brand Colors" variable set.
+   Brand is built on a single chromatic blue ramp (10 → 100),
+   a neutral gray ramp, white, and a seasonal promo green pair.
+   ============================================================ */
+
+:root {
+  /* ---- Chromatic — Light Blue ramp (brand primary) ---- */
+  --chromatic-lightblue-10: rgb(239, 244, 251); /* palest wash / section tints */
+  --chromatic-lightblue-20: rgb(223, 233, 246);
+  --chromatic-lightblue-30: rgb(207, 222, 242);
+  --chromatic-lightblue-40: rgb(174, 200, 234);
+  --chromatic-lightblue-50: rgb(142, 178, 225);
+  --chromatic-lightblue-60: rgb(110, 156, 216);
+  --chromatic-lightblue-70: rgb(78, 134, 208);
+  --chromatic-lightblue-80-base: rgb(53, 117, 202); /* primary action blue */
+  --chromatic-lightblue-90: rgb(47, 104, 177); /* primary border / hover */
+  --chromatic-lightblue-100: rgb(43, 94, 161); /* headings / deep brand blue */
+
+  /* extra deep brand blue used in nursery copy */
+  --chromatic-lightblue-ink: rgb(26, 58, 108);
+
+  /* ---- Neutrals ---- */
+  --neutrals-white: rgb(255, 255, 255);
+  --neutrals-light-gray: rgb(250, 250, 250); /* page / card off-white */
+  --neutrals-medium-light-gray: rgb(239, 239, 239); /* hairline fills */
+  --color-monochrome-gray-40-light-gray: rgb(222, 222, 222); /* borders */
+  --neutrals-medium-gray: rgb(198, 198, 198); /* default border / disabled */
+  --neutrals-medium-dark-gray: rgb(149, 149, 149); /* muted icon */
+  --neutrals-dark-gray: rgb(102, 102, 102); /* secondary text */
+  --neutrals-darker-gray: rgb(66, 66, 66); /* body text */
+  --neutrals-darkest-gray: rgb(54, 54, 54); /* logo wordmark gray */
+  --neutrals-black: rgb(30, 30, 30); /* near-black */
+
+  /* ---- Seasonal promo (Black Friday / Winter sale strip) ---- */
+  --promo-green-dark: rgb(92, 102, 77); /* strip banner background */
+  --promo-green-light: rgb(234, 236, 222); /* strip banner text */
+
+  /* ---- Utility ---- */
+  --glow-blue: rgba(0, 106, 255, 0.2); /* primary button focus glow */
+
+  /* ============================================================
+     Semantic aliases — prefer these in component code
+     ============================================================ */
+
+  /* surfaces */
+  --surface-page: var(--neutrals-white);
+  --surface-subtle: var(--neutrals-light-gray);
+  --surface-card: var(--neutrals-white);
+  --surface-tint: var(--chromatic-lightblue-10); /* tinted section bg */
+  --surface-tint-strong: rgb(235, 244, 255); /* info band on cards */
+  --surface-promo: var(--promo-green-dark);
+
+  /* text */
+  --text-heading: var(--chromatic-lightblue-100); /* section titles, blue */
+  --text-heading-ink: var(--chromatic-lightblue-ink);
+  --text-body: var(--neutrals-darker-gray);
+  --text-muted: var(--neutrals-dark-gray);
+  --text-faint: var(--neutrals-medium-dark-gray);
+  --text-on-dark: var(--neutrals-white);
+  --text-eyebrow: var(--chromatic-lightblue-100);
+  --text-link: var(--chromatic-lightblue-80-base);
+  --text-price: var(--neutrals-black);
+
+  /* actions */
+  --action-primary: var(--chromatic-lightblue-80-base);
+  --action-primary-border: var(--chromatic-lightblue-90);
+  --action-primary-hover: var(--chromatic-lightblue-90);
+  --action-secondary-border: var(--chromatic-lightblue-80-base);
+
+  /* lines & borders */
+  --border-default: var(--neutrals-medium-gray);
+  --border-subtle: var(--color-monochrome-gray-40-light-gray);
+  --border-hairline: var(--neutrals-medium-light-gray);
+  --border-focus: var(--chromatic-lightblue-80-base);
+
+  /* feedback */
+  --rating-star: var(--chromatic-lightblue-80-base);
+  --sale-red: rgb(214, 69, 69);
+}
