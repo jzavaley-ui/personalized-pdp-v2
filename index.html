@@ -147,7 +147,9 @@ input::placeholder{color:rgb(198,198,198);}
             <div style="{{ L.styleGrid }}">
               <sc-for list="{{ styles }}" as="st" hint-placeholder-count="2">
                 <div onClick="{{ st.onClick }}" style="display:flex;align-items:center;gap:16px;padding:8px 16px 8px 8px;border-radius:12px;cursor:pointer;background:rgb(255,255,255);box-shadow:{{ st.ring }};">
-                  <div style="width:63px;height:63px;flex-shrink:0;border-radius:8px;background-color:rgb(223,233,246);background-size:cover;background-position:center;background-image:{{ st.bg }};"></div>
+                  <div style="width:63px;height:63px;flex-shrink:0;border-radius:8px;overflow:hidden;position:relative;isolation:isolate;background:{{ st.tint }};box-shadow:inset 0 0 0 1px rgba(0,0,0,0.08);transition:background 200ms;">
+                    <div style="position:absolute;inset:0;background-size:cover;background-position:center;background-image:{{ st.bg }};filter:grayscale(1) brightness(1.7) contrast(0.85);mix-blend-mode:multiply;"></div>
+                  </div>
                   <div style="flex:1;display:flex;flex-direction:column;gap:2px;min-width:0;">
                     <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(54,54,54);">{{ st.name }}</span>
                     <span style="font-size:12px;line-height:1.4;">{{ st.price }}</span>
@@ -164,9 +166,7 @@ input::placeholder{color:rgb(198,198,198);}
             <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
               <span style="font-weight:700;font-size:12px;line-height:1.4;text-transform:uppercase;">color:</span>
               <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(53,117,202);">{{ colorLabel }}</span>
-              <sc-if value="{{ hasPersoBadge }}" hint-placeholder-val="{{ false }}"><x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Badge" tone="{{ persoTone }}" hint-size="84px,20px">{{ persoBadge }}</x-import></sc-if>
-              <sc-if value="{{ hasColorTag }}" hint-placeholder-val="{{ false }}"><span style="border-radius:999px;background:rgb(223,233,246);padding:2px 8px;font-weight:700;font-size:10px;line-height:1.4;letter-spacing:0.1em;color:rgb(43,94,161);">{{ colorTag }}</span></sc-if>
-            </div>
+              <sc-if value="{{ hasPersoBadge }}" hint-placeholder-val="{{ false }}"><x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Badge" tone="{{ persoTone }}" hint-size="84px,20px">{{ persoBadge }}</x-import></sc-if>            </div>
             <sc-if value="{{ hasNotice }}" hint-placeholder-val="{{ false }}">
               <div style="border-radius:8px;background:rgb(239,244,251);box-shadow:inset 0 0 0 1px rgb(174,200,234);padding:8px 12px;display:flex;gap:8px;align-items:flex-start;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgb(43,94,161)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg><span style="font-weight:500;font-size:12px;line-height:1.5;color:rgb(43,94,161);">{{ notice }}</span></div>
             </sc-if>
@@ -185,9 +185,9 @@ input::placeholder{color:rgb(198,198,198);}
             </sc-if>
           </div>
 
-          <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;flex-direction:column;gap:4px;align-items:center;">
             <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Button" variant="primary" size="xlarge" full-width="{{ true }}" disabled="{{ step1Blocked }}" onClick="{{ goStep2 }}" hint-size="100%,56px">{{ step1Cta }}</x-import>
-            <span style="font-size:12px;line-height:1.5;text-align:center;">Next, add an icon and a name.</span>
+            <button onClick="{{ skipPerso }}" disabled="{{ step1Blocked }}" style="{{ skipStyle }}">Skip personalization</button>
           </div>
         </div>
       </sc-if>
@@ -199,9 +199,17 @@ input::placeholder{color:rgb(198,198,198);}
             <div style="width:28px;height:28px;border-radius:50%;flex-shrink:0;background:{{ chosenSwatch }};box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);"></div>
             <div style="flex:1;min-width:0;display:flex;flex-direction:column;">
               <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(54,54,54);">{{ styleName }}</span>
-              <span style="font-size:12px;line-height:1.4;">{{ colorLabel }} · {{ priceLabel }}</span>
+              <span style="font-size:12px;line-height:1.4;">{{ colorLabel }} · {{ chairPriceLabel }}</span>
             </div>
             <button onClick="{{ goStep1 }}" style="border:none;background:none;cursor:pointer;height:44px;padding:0 4px;font-family:Poppins,sans-serif;font-weight:600;font-size:12px;color:rgb(53,117,202);text-decoration:underline;">Edit</button>
+          </div>
+          <sc-if value="{{ hasColorUpcharge }}" hint-placeholder-val="{{ false }}">
+            <div style="border-radius:8px;background:rgb(239,244,251);box-shadow:inset 0 0 0 1px rgb(174,200,234);padding:8px 12px;display:flex;gap:8px;align-items:flex-start;margin-top:-12px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgb(43,94,161)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg><span style="font-weight:500;font-size:12px;line-height:1.5;color:rgb(43,94,161);">{{ colorUpchargeMsg }}</span></div>
+          </sc-if>
+
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:-12px;">
+            <span style="font-weight:700;font-size:12px;line-height:1.4;text-transform:uppercase;">personalization:</span>
+            <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(53,117,202);">{{ persoFeeLabel }}</span>
           </div>
 
           <!-- Icon option -->
@@ -421,7 +429,7 @@ class Component extends DCLogic {
   constructor(props) {
     super(props);
     const s2 = (props.startStep ?? 1) === 2;
-    this.state = { styleId: s2 ? 'cozee' : null, color: s2 ? 'Blue and White' : null, step: s2 ? 2 : 1, iconOn: true, textOn: true, icon: null, text: '', threadColor: 'White', font: 'Goudy Bold', qty: 1, added: false, notice: '', hero: 0, w: typeof window !== 'undefined' ? window.innerWidth : 1360 };
+    this.state = { styleId: s2 ? 'cozee' : null, color: s2 ? 'Blue and White' : null, step: s2 ? 2 : 1, reached2: s2, iconOn: true, textOn: true, icon: null, text: '', threadColor: 'White', font: 'Goudy Bold', qty: 1, added: false, notice: '', hero: 0, w: typeof window !== 'undefined' ? window.innerWidth : 1360 };
   }
   rootRef = React.createRef(); stepsRef = React.createRef(); cardRef = React.createRef();
   componentDidMount() {
@@ -442,7 +450,7 @@ class Component extends DCLogic {
     };
   }
   goStep(n) {
-    this.setState({ step: n });
+    this.setState(n === 2 ? { step: n, reached2: true } : { step: n });
     const el = this.stepsRef.current;
     if (el) setTimeout(() => {
       const top = el.getBoundingClientRect().top + window.scrollY - (this.state.w < 900 ? 56 + 268 : 16);
@@ -490,9 +498,12 @@ class Component extends DCLogic {
     if (iconOn && !curIcon) missing.push('an icon');
     if (textOn && !hasText) missing.push('your text');
     const complete = step1Ok && !missing.length;
-    const price = s.color ? this.priceFor(st, { color: s.color }) : null;
+    const chairPrice = s.color ? this.priceFor(st, { color: s.color }) : null;
+    const PERSO_FEE = 15;
+    const personalizing = step1Ok && !!s.reached2 && (iconOn || textOn);
+    const price = chairPrice != null ? chairPrice + (personalizing ? PERSO_FEE : 0) : null;
     const priceLabel = price != null ? this.fmt(price) : 'From ' + this.fmt(chosen ? this.minPrice(st) : Math.min(...Component.STYLES.map(x => this.minPrice(x))));
-    const delta = price != null ? price - st.basePrice : 0;
+    const delta = chairPrice != null ? chairPrice - st.basePrice : 0;
     const ring = on => on ? 'inset 0 0 0 2px rgb(53,117,202)' : 'inset 0 0 0 1px rgb(174,200,234)';
     const showIcon = iconOn && !!curIcon;
     const nav = (arr, dd) => arr.map(l => ({ label: l, dd: dd.includes(l) }));
@@ -555,7 +566,8 @@ class Component extends DCLogic {
 
       chosen, notChosen: !chosen,
       styleName: chosen ? st.name : 'Select',
-      styles: styles.map(x => ({ name: x.name, bg: x.thumb ? 'url(' + x.thumb + ')' : 'none', ring: chosen && x.id === st.id ? '0 0 0 2px rgb(53,117,202)' : 'inset 0 0 0 1px rgb(174,200,234)',
+      styles: styles.map(x => ({ name: x.name, bg: x.thumb ? 'url(' + x.thumb + ')' : 'none',
+        tint: (chosen && x.id === st.id && curColor) ? curColor.css : 'rgb(255,255,255)', ring: chosen && x.id === st.id ? '0 0 0 2px rgb(53,117,202)' : 'inset 0 0 0 1px rgb(174,200,234)',
         price: (x.priceOverrides.length ? 'From ' : '') + this.fmt(this.minPrice(x)),
         sample: !!x.sample,
         capsColor: x.sample ? 'rgb(142,142,142)' : 'rgb(43,94,161)', onClick: () => this.selectStyle(x.id) })),
@@ -565,8 +577,15 @@ class Component extends DCLogic {
       colors: st.colors.map(c => ({ name: c.name, css: c.css, available: c.available !== false, ring: s.color === c.name ? '0 0 0 3px rgb(142,178,225)' : 'none',
         onClick: () => this.setState({ color: c.name, notice: '' }) })),
       step1Blocked: !step1Ok,
-      step1Cta: !chosen ? 'Select a Fabric' : !s.color ? 'Select a Color' : 'Next: Icon & Text',
-      goStep2: () => { if (step1Ok) this.goStep(2); },
+      step1Cta: !chosen ? 'Select a Fabric' : !s.color ? 'Select a Color' : 'Next: Personalize (+' + this.fmt(PERSO_FEE) + ')',
+      goStep2: () => { if (!step1Ok) return; if (!s.iconOn && !s.textOn) this.setState({ iconOn: true, textOn: true }); this.goStep(2); },
+      skipPerso: () => { if (!step1Ok) return; this.setState({ iconOn: false, textOn: false }); this.goStep(2); },
+      skipStyle: { border: 'none', background: 'none', height: 44, padding: '0 8px', fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: 14, textDecoration: 'underline', textUnderlineOffset: 3,
+        cursor: step1Ok ? 'pointer' : 'not-allowed', color: step1Ok ? 'rgb(53,117,202)' : 'rgb(174,200,234)' },
+      chairPriceLabel: chairPrice != null ? this.fmt(chairPrice) : '',
+      hasColorUpcharge: delta > 0.001,
+      colorUpchargeMsg: (s.color || '') + ' is a premium color: +' + this.fmt(delta) + ' over the ' + this.fmt(st.basePrice) + ' base price.',
+      persoFeeLabel: personalizing ? '+' + this.fmt(PERSO_FEE) : 'Not added',
       goStep1: () => this.goStep(1),
       chosenSwatch: curColor ? curColor.css : 'rgb(222,222,222)',
 
