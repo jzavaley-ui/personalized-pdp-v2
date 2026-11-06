@@ -1,677 +1,252 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Personalized Cozee Chair – Prototype</title>
-<script src="./support.js"></script>
+<title>Adley 3-in-1 Convertible Crib | Delta Children (Prototype, Option C)</title>
+<meta name="description" content="Prototype: regular product page with the Open Box option.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-<x-dc>
-<helmet>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="ds/deltachildrendesignsystem_6fc118/tokens/fonts.css">
-<link rel="stylesheet" href="ds/deltachildrendesignsystem_6fc118/tokens/colors.css">
-<link rel="stylesheet" href="ds/deltachildrendesignsystem_6fc118/tokens/typography.css">
-<link rel="stylesheet" href="ds/deltachildrendesignsystem_6fc118/tokens/spacing.css">
-<link rel="stylesheet" href="ds/deltachildrendesignsystem_6fc118/styles.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&amp;family=Lobster+Two:ital,wght@1,700&amp;family=Special+Elite&amp;family=Libre+Baskerville:wght@700&amp;family=Dancing+Script:wght@600&amp;display=swap">
-<script src="ds/deltachildrendesignsystem_6fc118/ds_bundle.js"></script>
-<style>
-body{margin:0;background:rgb(250,250,250);font-family:Poppins,sans-serif;}
-html,body{overflow-x:clip;}
-a{color:rgb(53,117,202);}a:hover{color:rgb(47,104,177);}
-input::placeholder{color:rgb(198,198,198);}
-</style>
-</helmet>
-<div ref="{{ rootRef }}" data-screen-label="Stepped PDP v2"style="width:100%;max-width:1360px;margin:0 auto;background:rgb(250,250,250);font-family:Poppins,sans-serif;color:rgb(102,102,102);padding-bottom:64px;">
 
-  <!-- Header: desktop -->
-  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-    <header style="background:rgb(255,255,255);">
-      <div style="height:60px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 40px;">
-        <div style="width:100%;max-width:280px;height:36px;border-radius:999px;background:rgb(250,250,250);box-shadow:inset 0 0 0 1px rgb(222,222,222);display:flex;align-items:center;gap:8px;padding:0 14px;box-sizing:border-box;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgb(102,102,102)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
-          <span style="font-size:13px;color:rgb(149,149,149);">Search</span>
-        </div>
-        <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Logo" height="22" hint-size="220px,28px"></x-import>
-        <div style="display:flex;justify-content:flex-end;gap:20px;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgb(54,54,54)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.3-9A5 5 0 0 1 12 6a5 5 0 0 1 9.3 6c-2.3 4.5-9.3 9-9.3 9z"></path></svg>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgb(54,54,54)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgb(54,54,54)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L20 8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
-        </div>
-      </div>
-      <div style="min-height:48px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 16px;padding:0 24px;font-size:14px;color:rgb(54,54,54);">
-        <sc-for list="{{ topLinks }}" as="l" hint-placeholder-count="7"><span style="display:flex;align-items:center;gap:4px;">{{ l.label }}<sc-if value="{{ l.dd }}" hint-placeholder-val="{{ false }}"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></sc-if></span></sc-for>
-        <span style="font-weight:600;color:rgb(53,117,202);padding:0 8px;">Sale</span>
-      </div>
-      <div style="min-height:56px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 16px;padding:8px 24px;font-size:14px;color:rgb(54,54,54);border-bottom:1px solid rgb(222,222,222);box-sizing:border-box;">
-        <sc-for list="{{ catLinks }}" as="l" hint-placeholder-count="10"><span style="display:flex;align-items:center;gap:4px;">{{ l.label }}<sc-if value="{{ l.dd }}" hint-placeholder-val="{{ false }}"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></sc-if></span></sc-for>
-      </div>
-    </header>
-  </sc-if>
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></symbol>
+  <symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></symbol>
+  <symbol id="i-chev-right" viewBox="0 0 24 24"><path d="m8.25 4.5 7.5 7.5-7.5 7.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4.5v15m7.5-7.5h-15"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M19.5 12h-15"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.25"/><path d="M12 7.75h.01"/></symbol>
+  <symbol id="i-lines" viewBox="0 0 24 24"><path d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25H12"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6l12 12"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/><path d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"/></symbol>
+  <symbol id="i-gg" viewBox="0 0 20 20"><rect x=".5" y=".5" width="19" height="19" rx="3" fill="#92c83e" stroke="none"/><path d="M6 13.5c0-4.5 3-7.5 8-7.5 0 5-3 8-7 8m0 0 3.5-3.5" fill="none" stroke="#fff" stroke-width="1.4"/></symbol>
+</svg>
 
-  <!-- Header: mobile -->
-  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
-    <header style="position:sticky;top:0;z-index:5;height:56px;background:rgb(255,255,255);border-bottom:1px solid rgb(222,222,222);display:grid;grid-template-columns:48px 1fr 88px;align-items:center;padding:0 12px;box-sizing:border-box;">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(54,54,54)" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
-      <div style="display:flex;justify-content:center;"><x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Logo" height="16" hint-size="170px,20px"></x-import></div>
-      <div style="display:flex;justify-content:flex-end;gap:16px;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgb(54,54,54)" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgb(54,54,54)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L20 8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
-      </div>
-    </header>
-  </sc-if>
-
-  <!-- Title -->
-  <div style="{{ L.titleRow }}">
-    <div style="display:flex;flex-direction:column;gap:4px;min-width:0;">
-      <span style="font-weight:500;font-size:12px;line-height:1.4;text-transform:capitalize;">delta children</span>
-      <span style="font-weight:700;font-size:24px;line-height:1.2;letter-spacing:0.15px;text-wrap:pretty;">{{ productTitle }}</span>
+<header class="site-header">
+  <div class="hdr-top">
+    <button type="button" class="icon-btn only-mobile" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    <label class="hdr-search only-desktop">
+      <svg class="icon"><use href="#i-search"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search">
+    </label>
+    <a class="hdr-logo" href="index.html" aria-label="Delta Children home"><img src="assets/img/logo.svg" alt="Delta Children" width="294" height="24"></a>
+    <div class="hdr-actions">
+      <button type="button" class="icon-btn only-mobile" aria-label="Search"><svg class="icon"><use href="#i-search"/></svg></button>
+      <button type="button" class="icon-btn only-desktop" aria-label="Account"><svg class="icon"><use href="#i-user"/></svg></button>
+      <button type="button" class="icon-btn" aria-label="Cart"><svg class="icon"><use href="#i-cart"/></svg></button>
     </div>
-    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-      <div style="display:flex;gap:16px;flex-shrink:0;">
-        <div style="width:80px;height:80px;border-radius:8px;background:url(assets/award-1.png) center / cover no-repeat;box-shadow:inset 0 0 0 1px rgb(198,198,198);"></div>
-        <div style="width:80px;height:80px;border-radius:8px;background:url(assets/award-2.png) center / cover no-repeat;box-shadow:inset 0 0 0 1px rgb(198,198,198);"></div>
-      </div>
-    </sc-if>
   </div>
+  <nav class="hdr-nav" aria-label="Utility">
+    <a href="#">About Us<svg class="icon chev"><use href="#i-chev-down"/></svg></a>
+    <a href="#">Safety<svg class="icon chev"><use href="#i-chev-down"/></svg></a>
+    <a href="#">Here To Help<svg class="icon chev"><use href="#i-chev-down"/></svg></a>
+    <a href="#">Crib Conversions<svg class="icon chev"><use href="#i-chev-down"/></svg></a>
+    <a href="#">Parenting Tips</a>
+    <a href="#">What’s New</a>
+    <a href="#">Gifts</a>
+    <a href="#" class="nav-chip">Gap</a>
+    <a href="#" class="btn btn-tertiary">Sale</a>
+  </nav>
+  <nav class="hdr-nav" aria-label="Categories">
+    <a href="#">Nursery<svg class="icon chev"><use href="#i-chev-down"/></svg></a>
+    <a href="#">Kid’s Bedroom<svg class="icon chev"><use href="#i-chev-down"/></svg></a>
+    <a href="#">Play &amp; Outdoor<svg class="icon chev"><use href="#i-chev-down"/></svg></a>
+    <a href="#">Strollers</a>
+    <a href="#">Waggons</a>
+    <a href="#">Baby Gear<svg class="icon chev"><use href="#i-chev-down"/></svg></a>
+    <a href="#">Mattresses<svg class="icon chev"><use href="#i-chev-down"/></svg></a>
+    <a href="#">Bedding<svg class="icon chev"><use href="#i-chev-down"/></svg></a>
+    <a href="#">Accessories<svg class="icon chev"><use href="#i-chev-down"/></svg></a>
+    <a href="#">Personalization</a>
+  </nav>
+</header>
 
-  <!-- Personalizer -->
-  <div ref="{{ cardRef }}" data-screen-label="Personalizer" style="{{ L.card }}">
+<section class="gallery" aria-label="Product images">
+  <div class="gallery-track">
+    <img src="assets/img/pdp-main.jpg" alt="Adley crib in a nursery">
+    <img src="assets/img/pdp-t1.jpg" alt="Healthiest choice for your baby">
+    <img src="assets/img/pdp-t2.jpg" alt="Perfect size dimensions">
+    <img src="assets/img/pdp-t3.jpg" alt="3 mattress heights">
+    <img src="assets/img/pdp-t4.jpg" alt="Grows with baby from birth to big kid">
+  </div>
+  <div class="gallery-shade"></div>
+  <div class="gallery-actions">
+    <button type="button" class="btn-ghost-chip">View All Images</button>
+    <button type="button" class="btn-ghost-chip">Share</button>
+  </div>
+  <div class="gallery-dots"></div>
+</section>
 
-    <!-- Preview -->
-    <div style="{{ L.previewCol }}">
-      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}"><span style="font-weight:700;font-size:12px;line-height:1.4;text-transform:uppercase;">preview</span></sc-if>
-      <div style="{{ L.previewRow }}">
-        <div style="{{ L.thumbCol }}">
-          <sc-for list="{{ thumbs }}" as="th" hint-placeholder-count="5">
-            <button onClick="{{ th.onClick }}" aria-label="{{ th.label }}" aria-pressed="{{ th.on }}" style="{{ th.style }}">
-              <sc-if value="{{ th.live }}" hint-placeholder-val="{{ false }}"><span style="{{ th.tag }}">preview</span></sc-if>
-            </button>
-          </sc-for>
-        </div>
-        <div style="{{ P.box }}">
-          <sc-if value="{{ showIcon }}" hint-placeholder-val="{{ false }}"><div style="{{ P.icon }}"></div></sc-if>
-          <sc-if value="{{ showText }}" hint-placeholder-val="{{ false }}"><span style="{{ P.text }}">{{ previewText }}</span></sc-if>
-          <sc-if value="{{ mobileLive }}" hint-placeholder-val="{{ false }}">
-            <span style="position:absolute;left:8px;top:8px;border-radius:999px;background:rgba(255,255,255,0.92);padding:3px 10px;font-weight:700;font-size:10px;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:rgb(43,94,161);">preview</span>
-          </sc-if>
-        </div>
-      </div>
-      <span style="font-size:10px;line-height:1.5;">*This preview is for illustrative purposes only! Actual text on the product may vary in size and position.</span>
+<main class="pdp">
+  <div class="pdp-head">
+    <div>
+      <p class="brand">Delta Children</p>
+      <h1 class="title">Adley 3-in-1 Convertible Crib</h1>
     </div>
-
-    <!-- Steps -->
-    <div ref="{{ stepsRef }}" style="{{ L.stepsCol }}">
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;">
-          <span style="font-weight:600;font-size:20px;line-height:1.5;">{{ priceLabel }}</span>
-          <div style="display:flex;align-items:center;gap:8px;">
-            <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Rating" value="{{ 5 }}" size="{{ 16 }}" hint-size="88px,16px"></x-import>
-            <span style="font-weight:600;font-size:12px;line-height:1.4;letter-spacing:0.15px;color:rgb(53,117,202);text-decoration:underline;">85 Customer Reviews</span>
-          </div>
-        </div>
-        <div style="height:1px;background:rgb(222,222,222);"></div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-        <sc-for list="{{ stepTabs }}" as="t" hint-placeholder-count="2">
-          <sc-if value="{{ t.locked }}" hint-placeholder-val="{{ false }}">
-            <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Tooltip" content="Complete Step 1 first — choose a fabric and color." placement="top" max-width="{{ 220 }}" dc-props="{{ tipProps }}" hint-size="100%,56px">
-              <button onClick="{{ t.onClick }}" style="{{ t.style }}">
-            <span style="{{ t.dot }}">
-              <sc-if value="{{ t.done }}" hint-placeholder-val="{{ false }}"><svg width="11" height="8" viewBox="0 0 16 11" fill="rgb(255,255,255)"><path d="M15.74.248c.347.33.347.866 0 1.196L5.962 10.752a.93.93 0 0 1-1.257 0L.26 6.521a.82.82 0 0 1 0-1.196.93.93 0 0 1 1.257 0l3.816 3.632L14.483.248a.93.93 0 0 1 1.257 0z"></path></svg></sc-if>
-              <sc-if value="{{ t.notDone }}" hint-placeholder-val="{{ true }}">{{ t.n }}</sc-if>
-            </span>
-            <span style="display:flex;flex-direction:column;align-items:flex-start;gap:0;min-width:0;text-align:left;">
-              <span style="font-weight:700;font-size:10px;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;">{{ t.kicker }}</span>
-              <span style="font-weight:600;font-size:14px;line-height:1.4;">{{ t.label }}</span>
-            </span>
-          </button>
-            </x-import>
-          </sc-if>
-          <sc-if value="{{ t.unlocked }}" hint-placeholder-val="{{ true }}">
-            <button onClick="{{ t.onClick }}" style="{{ t.style }}">
-            <span style="{{ t.dot }}">
-              <sc-if value="{{ t.done }}" hint-placeholder-val="{{ false }}"><svg width="11" height="8" viewBox="0 0 16 11" fill="rgb(255,255,255)"><path d="M15.74.248c.347.33.347.866 0 1.196L5.962 10.752a.93.93 0 0 1-1.257 0L.26 6.521a.82.82 0 0 1 0-1.196.93.93 0 0 1 1.257 0l3.816 3.632L14.483.248a.93.93 0 0 1 1.257 0z"></path></svg></sc-if>
-              <sc-if value="{{ t.notDone }}" hint-placeholder-val="{{ true }}">{{ t.n }}</sc-if>
-            </span>
-            <span style="display:flex;flex-direction:column;align-items:flex-start;gap:0;min-width:0;text-align:left;">
-              <span style="font-weight:700;font-size:10px;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;">{{ t.kicker }}</span>
-              <span style="font-weight:600;font-size:14px;line-height:1.4;">{{ t.label }}</span>
-            </span>
-          </button>
-          </sc-if>
-        </sc-for>
-      </div>
-
-      <!-- STEP 1 -->
-      <sc-if value="{{ onStep1 }}" hint-placeholder-val="{{ true }}">
-        <div style="display:flex;flex-direction:column;gap:24px;">
-          <div style="display:flex;flex-direction:column;gap:12px;">
-            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-              <span style="font-weight:700;font-size:12px;line-height:1.4;text-transform:uppercase;">fabric:</span>
-              <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(53,117,202);">{{ styleName }}</span>
-            </div>
-            <div style="{{ L.styleGrid }}">
-              <sc-for list="{{ styles }}" as="st" hint-placeholder-count="2">
-                <div onClick="{{ st.onClick }}" style="display:flex;align-items:center;gap:16px;padding:8px 16px 8px 8px;border-radius:12px;cursor:pointer;background:rgb(255,255,255);box-shadow:{{ st.ring }};">
-                  <div style="width:63px;height:63px;flex-shrink:0;border-radius:8px;overflow:hidden;position:relative;isolation:isolate;background:{{ st.tint }};box-shadow:inset 0 0 0 1px rgba(0,0,0,0.08);transition:background 200ms;">
-                    <div style="position:absolute;inset:0;background-size:cover;background-position:center;background-image:{{ st.bg }};filter:grayscale(1) brightness(1.7) contrast(0.85);mix-blend-mode:multiply;"></div>
-                  </div>
-                  <div style="flex:1;display:flex;flex-direction:column;gap:2px;min-width:0;">
-                    <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(54,54,54);">{{ st.name }}</span>
-                    <span style="font-size:12px;line-height:1.4;">{{ st.price }}</span>
-                    <sc-if value="{{ st.sample }}" hint-placeholder-val="{{ false }}"><span style="font-weight:700;font-size:10px;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:rgb(142,142,142);">sample data</span></sc-if>
-                  </div>
-                </div>
-              </sc-for>
-            </div>
-          </div>
-
-          <div style="height:1px;background:rgb(222,222,222);"></div>
-
-          <div style="display:flex;flex-direction:column;gap:12px;">
-            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-              <span style="font-weight:700;font-size:12px;line-height:1.4;text-transform:uppercase;">color:</span>
-              <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(53,117,202);">{{ colorLabel }}</span>
-            </div>
-            <sc-if value="{{ hasNotice }}" hint-placeholder-val="{{ false }}">
-              <div style="border-radius:8px;background:rgb(239,244,251);box-shadow:inset 0 0 0 1px rgb(174,200,234);padding:8px 12px;display:flex;gap:8px;align-items:flex-start;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgb(43,94,161)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg><span style="font-weight:500;font-size:12px;line-height:1.5;color:rgb(43,94,161);">{{ notice }}</span></div>
-            </sc-if>
-            <sc-if value="{{ chosen }}" hint-placeholder-val="{{ false }}">
-              <div style="display:flex;flex-wrap:wrap;margin-left:-6px;">
-                <sc-for list="{{ colors }}" as="c" hint-placeholder-count="8">
-                  <div style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;"><div style="width:28px;height:28px;border-radius:50%;display:flex;box-shadow:{{ c.ring }};"><x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.ColorSwatch" color="{{ c.css }}" label="{{ c.name }}" size="{{ 28 }}" available="{{ c.available }}" onClick="{{ c.onClick }}" hint-size="28px,28px"></x-import></div></div>
-                </sc-for>
-              </div>
-            </sc-if>
-            <sc-if value="{{ notChosen }}" hint-placeholder-val="{{ true }}">
-              <div style="height:44px;border-radius:8px;background:rgb(250,250,250);box-shadow:inset 0 0 0 1px rgb(222,222,222);display:flex;align-items:center;padding:0 12px;font-size:12px;line-height:1.5;color:rgb(134,134,134);">Choose a fabric to see its colors.</div>
-            </sc-if>
-          </div>
-
-          <div style="display:flex;flex-direction:column;gap:4px;align-items:center;">
-            <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Button" variant="primary" size="xlarge" full-width="{{ true }}" disabled="{{ step1Blocked }}" onClick="{{ goStep2 }}" hint-size="100%,56px">{{ step1Cta }}</x-import>
-            <button onClick="{{ skipPerso }}" disabled="{{ step1Blocked }}" style="{{ skipStyle }}">Skip personalization</button>
-          </div>
-        </div>
-      </sc-if>
-
-      <!-- STEP 2 -->
-      <sc-if value="{{ onStep2 }}" hint-placeholder-val="{{ false }}">
-        <div style="display:flex;flex-direction:column;gap:24px;">
-          <div style="border-radius:8px;background:rgb(255,255,255);box-shadow:inset 0 0 0 1px rgb(222,222,222);padding:10px 12px;display:flex;align-items:center;gap:12px;">
-            <div style="width:28px;height:28px;border-radius:50%;flex-shrink:0;background:{{ chosenSwatch }};box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);"></div>
-            <div style="flex:1;min-width:0;display:flex;flex-direction:column;">
-              <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(54,54,54);">{{ styleName }}</span>
-              <span style="font-size:12px;line-height:1.4;">{{ colorLabel }} · {{ chairPriceLabel }}</span>
-            </div>
-            <button onClick="{{ goStep1 }}" style="border:none;background:none;cursor:pointer;height:44px;padding:0 4px;font-family:Poppins,sans-serif;font-weight:600;font-size:12px;color:rgb(53,117,202);text-decoration:underline;">Edit</button>
-          </div>
-          <sc-if value="{{ hasColorUpcharge }}" hint-placeholder-val="{{ false }}">
-            <div style="border-radius:8px;background:rgb(239,244,251);box-shadow:inset 0 0 0 1px rgb(174,200,234);padding:8px 12px;display:flex;gap:8px;align-items:flex-start;margin-top:-12px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgb(43,94,161)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg><span style="font-weight:500;font-size:12px;line-height:1.5;color:rgb(43,94,161);">{{ colorUpchargeMsg }}</span></div>
-          </sc-if>
-          <sc-if value="{{ colorTextOnly }}" hint-placeholder-val="{{ false }}">
-            <div style="border-radius:8px;background:rgb(239,244,251);box-shadow:inset 0 0 0 1px rgb(174,200,234);padding:8px 12px;display:flex;gap:8px;align-items:flex-start;margin-top:-12px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgb(43,94,161)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg><span style="font-weight:500;font-size:12px;line-height:1.5;color:rgb(43,94,161);">{{ colorTextOnlyMsg }}</span></div>
-          </sc-if>
-
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:-12px;">
-            <span style="font-weight:700;font-size:12px;line-height:1.4;text-transform:uppercase;">personalization:</span>
-            <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(53,117,202);">{{ persoFeeLabel }}</span>
-          </div>
-
-          <!-- Icon option -->
-          <div style="{{ iconBox }}">
-            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;">
-              <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Checkbox" checked="{{ iconOn }}" disabled="{{ iconDisabled }}" label="Add an icon" onChange="{{ setIconOn }}" hint-size="130px,24px"></x-import>
-              <sc-if value="{{ iconOn }}" hint-placeholder-val="{{ true }}"><span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(53,117,202);">{{ iconLabel }}</span></sc-if>
-              <sc-if value="{{ iconUnsupported }}" hint-placeholder-val="{{ false }}"><button onClick="{{ goStep1 }}" style="border:none;background:none;cursor:pointer;height:44px;padding:0 4px;flex-shrink:0;font-family:Poppins,sans-serif;font-weight:600;font-size:12px;color:rgb(53,117,202);text-decoration:underline;">Change color</button></sc-if>
-            </div>
-            <sc-if value="{{ iconUnsupported }}" hint-placeholder-val="{{ false }}"><span style="font-size:12px;line-height:1.5;color:rgb(102,102,102);">{{ iconUnsupportedMsg }}</span></sc-if>
-            <sc-if value="{{ iconOn }}" hint-placeholder-val="{{ true }}">
-              <div style="{{ L.iconGrid }}">
-                <sc-for list="{{ icons }}" as="ic" hint-placeholder-count="13">
-                  <div onClick="{{ ic.onClick }}" title="{{ ic.name }}" style="aspect-ratio:1;min-width:0;border-radius:12px;padding:5px;box-sizing:border-box;cursor:pointer;box-shadow:{{ ic.ring }};">
-                    <div style="width:100%;height:100%;border-radius:8px;background-color:rgb(223,233,246);padding:10px;box-sizing:border-box;background-origin:content-box;background-size:contain;background-position:center;background-repeat:no-repeat;background-image:{{ ic.bg }};"></div>
-                  </div>
-                </sc-for>
-              </div>
-            </sc-if>
-          </div>
-
-          <!-- Text option -->
-          <div style="{{ textBox }}">
-            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;">
-              <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Checkbox" checked="{{ textOn }}" disabled="{{ textDisabled }}" label="Add personalized text" onChange="{{ setTextOn }}" hint-size="200px,24px"></x-import>
-              <sc-if value="{{ textUnsupported }}" hint-placeholder-val="{{ false }}"><button onClick="{{ goStep1 }}" style="border:none;background:none;cursor:pointer;height:44px;padding:0 4px;flex-shrink:0;font-family:Poppins,sans-serif;font-weight:600;font-size:12px;color:rgb(53,117,202);text-decoration:underline;">Change color</button></sc-if>
-            </div>
-            <sc-if value="{{ textUnsupported }}" hint-placeholder-val="{{ false }}"><span style="font-size:12px;line-height:1.5;color:rgb(102,102,102);">{{ textUnsupportedMsg }}</span></sc-if>
-          <sc-if value="{{ textOn }}" hint-placeholder-val="{{ true }}">
-            <div style="display:flex;flex-direction:column;gap:20px;">
-              <div style="display:flex;flex-direction:column;gap:12px;">
-                <span style="font-weight:700;font-size:12px;line-height:1.4;text-transform:uppercase;">your text:</span>
-                <div style="display:flex;flex-direction:column;gap:8px;">
-                  <input value="{{ text }}" onChange="{{ onTextChange }}" maxLength="{{ maxChars }}" placeholder="Write here" style="height:48px;width:100%;border-radius:8px;border:none;background:rgb(255,255,255);box-shadow:inset 0 0 0 1.5px rgb(198,198,198);padding:0 12px;font-family:Poppins,sans-serif;font-weight:500;font-size:16px;color:rgb(66,66,66);outline:none;box-sizing:border-box;" style-focus="box-shadow:inset 0 0 0 2px rgb(53,117,202);">
-                  <span style="font-weight:600;font-size:10px;line-height:1.4;text-transform:uppercase;">{{ charsHint }}</span>
-                </div>
-              </div>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <div style="display:flex;align-items:center;gap:12px;">
-                  <span style="font-weight:700;font-size:12px;line-height:1.4;text-transform:uppercase;">text color:</span>
-                  <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(53,117,202);">{{ textColor }}</span>
-                </div>
-                <div style="display:flex;flex-wrap:wrap;margin-left:-6px;">
-                  <sc-for list="{{ textColors }}" as="c" hint-placeholder-count="4">
-                    <div style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;"><div style="width:28px;height:28px;border-radius:50%;display:flex;box-shadow:{{ c.ring }};"><x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.ColorSwatch" color="{{ c.css }}" label="{{ c.name }}" size="{{ 28 }}" onClick="{{ c.onClick }}" hint-size="28px,28px"></x-import></div></div>
-                  </sc-for>
-                </div>
-              </div>
-              <div style="display:flex;flex-direction:column;gap:12px;">
-                <div style="display:flex;align-items:center;gap:12px;">
-                  <span style="font-weight:700;font-size:12px;line-height:1.4;text-transform:uppercase;">choose font:</span>
-                  <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(53,117,202);">{{ font }}</span>
-                </div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-                  <sc-for list="{{ fonts }}" as="f" hint-placeholder-count="5">
-                    <button onClick="{{ f.onClick }}" style="{{ f.style }}">{{ f.name }}</button>
-                  </sc-for>
-                </div>
-              </div>
-            </div>
-          </sc-if>
-          </div>
-
-          <sc-if value="{{ noneOn }}" hint-placeholder-val="{{ false }}">
-            <div style="border-radius:8px;background:rgb(250,250,250);box-shadow:inset 0 0 0 1px rgb(222,222,222);padding:12px;font-size:12px;line-height:1.5;">Your chair will ship without personalization.</div>
-          </sc-if>
-
-          <div style="border-radius:8px;background:rgb(239,244,251);box-shadow:inset 0 0 0 2px rgb(174,200,234);padding:12px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
-            <div style="flex:1;min-width:160px;display:flex;flex-direction:column;gap:4px;">
-              <span style="font-weight:700;font-size:10px;line-height:1.4;color:rgb(43,94,161);text-transform:uppercase;">accident protection plan</span>
-              <span style="font-weight:600;font-size:12px;line-height:1.5;">2-Year Extended Warranty</span>
-              <div style="display:flex;gap:4px;align-items:center;">
-                <span style="font-weight:700;font-size:14px;line-height:1.4;color:rgb(47,104,177);">$39.99</span>
-                <span style="font-size:12px;line-height:1.5;text-decoration:line-through;">$59.99</span>
-              </div>
-            </div>
-            <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Button" variant="secondary" size="small" hint-size="148px,32px">Protect Purchase +</x-import>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:12px;padding-top:4px;">
-            <div style="display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;align-items:center;">
-              <span style="font-weight:600;font-size:24px;line-height:1.4;color:rgb(102,102,102);">{{ priceLabel }}</span>
-              <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(64,150,6);">Ships Early May</span>
-            </div>
-            <div style="display:flex;gap:12px;align-items:center;">
-              <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.QuantityStepper" value="{{ qty }}" onChange="{{ setQty }}" hint-size="104px,52px"></x-import>
-              <div style="flex:1;min-width:0;display:flex;">
-                <sc-if value="{{ cartBlocked }}" hint-placeholder-val="{{ true }}">
-                  <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Tooltip" content="{{ missingMsg }}" placement="top" max-width="{{ 240 }}" dc-props="{{ tipProps }}" hint-size="100%,56px"><x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Button" variant="primary" size="xlarge" full-width="{{ true }}" disabled="{{ cartBlocked }}" onClick="{{ addToCart }}" hint-size="100%,56px">{{ cartLabel }}</x-import></x-import>
-                </sc-if>
-                <sc-if value="{{ cartReady }}" hint-placeholder-val="{{ false }}"><x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Button" variant="primary" size="xlarge" full-width="{{ true }}" disabled="{{ cartBlocked }}" onClick="{{ addToCart }}" hint-size="100%,56px">{{ cartLabel }}</x-import></sc-if>
-              </div>
-            </div>
-            <div style="display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;font-size:12px;line-height:1.4;">
-              <span style="font-weight:700;">4 interest-free installments, or from $18.05/mo with</span>
-              <img src="assets/shop-pay.svg" alt="Shop Pay" style="height:13px;">
-              <a href="#" style="font-size:12px;color:rgb(78,134,208);text-decoration:underline;">Check your purchasing power</a>
-            </div>
-          </div>
-
-
-        </div>
-      </sc-if>
+    <div class="awards">
+      <img src="assets/img/pdp-award1.png" alt="2020 Best Deal at Walmart award">
+      <img src="assets/img/pdp-award2.png" alt="2020 Best Adaptable Crib award">
     </div>
   </div>
 
-  <!-- Below -->
-  <div style="{{ L.below }}">
-    <div style="min-width:0;">
-    <div style="border-radius:16px;background:rgb(223,233,246);padding:16px;">
-      <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;padding:0 8px;">
-        <div style="flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:32px;padding:16px 0;">
-          <span style="font-weight:600;font-size:32px;line-height:1.2;color:rgb(53,117,202);">Meet the<br><span style="white-space:nowrap;">Personalized Cozee</span></span>
-          <div style="display:flex;flex-direction:column;gap:16px;">
-            <sc-for list="{{ features }}" as="ft" hint-placeholder-count="5">
-              <div style="display:flex;align-items:center;gap:8px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgb(64,150,6)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="visibility:{{ ft.leaf }};"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"></path><path d="M5 19l7-7"></path></svg>
-                <span style="font-weight:500;font-size:14px;line-height:1.5;color:rgb(47,104,177);text-transform:capitalize;">{{ ft.label }}</span>
-              </div>
-            </sc-for>
-          </div>
-        </div>
-        <div style="flex:0 1 344px;aspect-ratio:1;border-radius:16px;background:url(assets/feature-main.png) center / cover no-repeat;"></div>
+  <aside class="pdp-panel panel" aria-label="Purchase options">
+    <div class="price-row">
+      <p class="price"><span class="price-now">$349.99</span> <s class="price-was">$399.99</s></p>
+      <span class="rating">
+        <span class="stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+        <a href="#">14 customer reviews</a>
+      </span>
+    </div>
+
+    <hr>
+
+    <div class="group">
+      <div class="opt-label"><b>Color:</b><span id="color-name">Teak Brown</span></div>
+      <div class="swatches" data-swatches="color-name" role="group" aria-label="Color">
+        <button type="button" class="swatch" aria-pressed="true" data-name="Teak Brown" aria-label="Teak Brown"><img src="assets/img/pdp-sw1.jpg" alt=""></button>
+        <button type="button" class="swatch" aria-pressed="false" data-name="Light Blue" aria-label="Light Blue"><img src="assets/img/pdp-sw2.jpg" alt=""></button>
+        <button type="button" class="swatch" aria-pressed="false" data-name="Natural" aria-label="Natural"><img src="assets/img/pdp-sw3.jpg" alt=""></button>
       </div>
     </div>
+
+    <hr>
+
+    <div class="group">
+      <b style="font-size:12px;line-height:1.4">Add More and Save!</b>
+      <div class="upsells">
+        <button type="button" class="upsell"><span class="upsell-main"><span class="upsell-name"><strong>Mattress</strong><small>2 Options Available</small></span><span class="upsell-price">From <b>$99.99</b><s>$0,000</s></span></span><svg class="icon"><use href="#i-chev-down"/></svg></button>
+        <button type="button" class="upsell"><span class="upsell-main"><span class="upsell-name"><strong>Sheets</strong><small>8 Options Available</small></span><span class="upsell-price">From <b>$29.99</b></span></span><svg class="icon"><use href="#i-chev-down"/></svg></button>
+        <button type="button" class="upsell"><span class="upsell-main"><span class="upsell-name"><strong>Toddler Guardrail</strong><small>1 Option Available</small></span><span class="upsell-price">From <b>$49.99</b><s>$0,000</s></span></span><svg class="icon"><use href="#i-chev-down"/></svg></button>
+        <button type="button" class="upsell"><span class="upsell-main"><span class="upsell-name"><strong>Full Size Bed Conversion Kit</strong><small>1 Option Available</small></span><span class="upsell-price">From <b>$49.99</b></span></span><svg class="icon"><use href="#i-chev-down"/></svg></button>
+      </div>
     </div>
-    <div style="{{ L.buyBox }}">
-      <div style="{{ L.buyInner }}">
-        <div style="border-radius:8px;background:rgb(239,244,251);box-shadow:inset 0 0 0 2px rgb(174,200,234);padding:12px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;">
-          <div style="flex:1;min-width:160px;display:flex;flex-direction:column;gap:4px;">
-            <span style="font-weight:700;font-size:10px;line-height:1.4;color:rgb(43,94,161);text-transform:uppercase;">accident protection plan</span>
-            <span style="font-weight:600;font-size:12px;line-height:1.5;letter-spacing:0.15px;">2-Year Extended Warranty</span>
-            <div style="display:flex;gap:4px;align-items:center;">
-              <span style="font-weight:700;font-size:14px;line-height:1.4;letter-spacing:0.15px;color:rgb(47,104,177);">$39.99</span>
-              <span style="font-size:12px;line-height:1.5;text-decoration:line-through;">$59.99</span>
-            </div>
-          </div>
-          <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Button" variant="secondary" size="small" hint-size="148px,32px">Protect Purchase +</x-import>
+
+    <hr>
+
+    <div class="warranty">
+      <div class="warranty-txt">
+        <span class="eyebrow">Accident Protection Plan</span>
+        <strong>2-Year Extended Warranty</strong>
+        <span class="wp">$39.99<s>$59.99</s></span>
+      </div>
+      <button type="button" class="btn btn-secondary">Protect Purchase<svg class="icon"><use href="#i-plus"/></svg></button>
+    </div>
+
+    <div class="buy">
+      <p class="ships">Ships Early December</p>
+      <div class="buy-row">
+        <div class="qty" data-qty data-max="10">
+          <button type="button" data-step="-1" aria-label="Decrease quantity"><svg class="icon"><use href="#i-minus"/></svg></button>
+          <output aria-live="polite">1</output>
+          <button type="button" data-step="1" aria-label="Increase quantity"><svg class="icon"><use href="#i-plus"/></svg></button>
         </div>
-        <div style="display:flex;flex-direction:column;gap:12px;">
-          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;">
-            <span style="font-weight:600;font-size:20px;line-height:1.5;">{{ priceLabel }}</span>
-            <div style="display:flex;align-items:center;gap:8px;">
-              <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Rating" value="{{ 5 }}" size="{{ 16 }}" hint-size="88px,16px"></x-import>
-              <span style="font-weight:600;font-size:12px;line-height:1.4;letter-spacing:0.15px;color:rgb(53,117,202);text-decoration:underline;">14 Customer Reviews</span>
-            </div>
+        <button type="button" class="btn btn-primary btn-xl">Add To Cart</button>
+      </div>
+      <div class="installments">
+        <span>4 interest-free installments, or from $18.05/mo</span>
+        <span>With <span class="shoppay">Shop Pay</span> <a href="#">Check your purchasing power</a></span>
+      </div>
+
+      <!-- Option C: condition selector (New selected) -->
+      <fieldset class="cond">
+        <legend><b>Condition:</b> <span>New</span></legend>
+        <div class="cond-grid">
+          <label class="cond-opt is-selected">
+            <input type="radio" name="condition" value="new" checked>
+            <span class="cond-name">New</span>
+            <span class="cond-price">$349.99</span>
+          </label>
+          <label class="cond-opt" data-href="open-box.html">
+            <input type="radio" name="condition" value="open-box">
+            <span class="cond-name">Open Box</span>
+            <span class="cond-price">From $000.00</span>
+            <span class="cond-desc">Opened, returned and inspected. Final sale.</span>
+          </label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="tabs">
+      <details class="tab"><summary><span><svg class="icon"><use href="#i-info"/></svg>Description</span><svg class="icon tab-chev"><use href="#i-chev-down"/></svg></summary><p>[Product description]</p></details>
+      <details class="tab"><summary><span><svg class="icon"><use href="#i-lines"/></svg>Product Details</span><svg class="icon tab-chev"><use href="#i-chev-down"/></svg></summary><p>[Product details]</p></details>
+      <details class="tab"><summary><span><svg class="icon"><use href="#i-expand"/></svg>Dimensions</span><svg class="icon tab-chev"><use href="#i-chev-down"/></svg></summary><p>[Dimensions]</p></details>
+      <details class="tab"><summary><span><svg class="icon"><use href="#i-wrench"/></svg>Assembly Instructions</span><svg class="icon tab-chev"><use href="#i-chev-down"/></svg></summary><p>[Assembly instructions]</p></details>
+    </div>
+  </aside>
+
+  <div class="pdp-content">
+    <section class="features-wrap" aria-label="Main features">
+      <div class="features">
+        <div class="features-inner">
+          <div class="features-text">
+            <h2>Meet the Dylan</h2>
+            <ul>
+              <li><svg class="icon"><use href="#i-gg"/></svg>Greenguard Gold Certified</li>
+              <li><svg class="icon"><use href="#i-gg"/></svg>Grows With Baby</li>
+              <li><svg class="icon"><use href="#i-gg"/></svg>Modern Slick Design</li>
+              <li><svg class="icon"><use href="#i-gg"/></svg>Good for the Environment</li>
+              <li><svg class="icon"><use href="#i-gg"/></svg>Easy Assembly</li>
+            </ul>
           </div>
-          <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(64,150,6);">Ships Early May</span>
-          <div style="display:flex;gap:16px;align-items:center;">
-            <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.QuantityStepper" value="{{ qty }}" onChange="{{ setQty }}" hint-size="104px,52px"></x-import>
-            <div style="flex:1;min-width:0;"><x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Button" variant="primary" size="xlarge" full-width="{{ true }}" onClick="{{ buyAction }}" hint-size="100%,56px">{{ buyLabel }}</x-import></div>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;font-size:12px;line-height:1.4;">
-            <span>4 interest-free installments, or from <strong>$18.05</strong>/mo with</span>
-            <img src="assets/shop-pay.svg" alt="Shop Pay" style="height:13px;">
-            <a href="#" style="font-size:12px;color:rgb(78,134,208);text-decoration:underline;">Check your purchasing power</a>
-          </div>
+          <img class="features-img" src="assets/img/pdp-feature.jpg" alt="Dylan crib in a nursery">
         </div>
       </div>
-      <x-import component-from-global-scope="DeltaChildrenDesignSystem_6fc118.Accordion" items="{{ infoTabs }}" hint-size="100%,236px"></x-import>
-    </div>
+      <div class="features-more">
+        <div class="callout-peek" aria-hidden="true">
+          <div class="callout-peek-row">
+            <img src="assets/img/pdp-callout1.jpg" alt="">
+            <div class="callout-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary">View More<svg class="icon"><use href="#i-chev-down"/></svg></a>
+      </div>
+    </section>
+
+    <section class="video" aria-label="Product video">
+      <h2>Get to Know the Product Better</h2>
+      <div class="video-frame">
+        <img src="assets/img/pdp-video.jpg" alt="Dylan 4-in-1 convertible crib video">
+        <button type="button" class="play" aria-label="Play video"><svg><use href="#i-play"/></svg></button>
+      </div>
+    </section>
+
+    <section class="shoppable" aria-label="Complete the look">
+      <div>
+        <h2>Complete the Look</h2>
+        <p class="sub">With matching items from this collection</p>
+      </div>
+      <div class="shop-img">
+        <img src="assets/img/pdp-shoppable.jpg" alt="Adley nursery collection">
+        <button type="button" class="hotspot" style="left: 90.2%; top: 34.1%" aria-label="Shop item 1"><svg class="icon"><use href="#i-plus"/></svg></button>
+        <button type="button" class="hotspot" style="left: 13.5%; top: 60%" aria-label="Shop item 2"><svg class="icon"><use href="#i-plus"/></svg></button>
+        <button type="button" class="hotspot" style="left: 46.8%; top: 62.1%" aria-label="Shop item 3"><svg class="icon"><use href="#i-plus"/></svg></button>
+      </div>
+      <div class="shop-cta">
+        <span>Want to check even more options?</span>
+        <a href="#" class="btn btn-primary">View All Options</a>
+      </div>
+    </section>
   </div>
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;startStep&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[1,2],&quot;default&quot;:1,&quot;tsType&quot;:&quot;1|2&quot;,&quot;section&quot;:&quot;State&quot;},&quot;previewSixStyles&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Scalability&quot;},&quot;maxChars&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:10,&quot;min&quot;:4,&quot;max&quot;:20,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Personalization&quot;}}">
-class Component extends DCLogic {
-  static FONTS = [
-    { name: 'Goudy Bold', family: '"Goudy Bookletter 1911", serif', weight: 400 },
-    { name: 'Madison', family: '"Lobster Two", cursive', weight: 700, italic: true },
-    { name: 'Typewriter', family: '"Special Elite", monospace', weight: 400 },
-    { name: 'Brantford', family: '"Libre Baskerville", serif', weight: 700 },
-    { name: 'Snow', family: '"Dancing Script", cursive', weight: 600 },
-  ];
-  static ICONS = [
-    { name: 'Racing Car', img: 'assets/icon-racing-car.png' },
-    { name: 'Dinosaur', img: 'assets/icon-alt.png' },
-    { name: 'Racing Car 2', img: 'assets/icon-racing-car.png' },
-    { name: 'Dinosaur 2', img: 'assets/icon-alt.png' },
-    { name: 'Racing Car 3', img: 'assets/icon-racing-car.png' },
-    { name: 'Dinosaur 3', img: 'assets/icon-alt.png' },
-    { name: 'Racing Car 4', img: 'assets/icon-racing-car.png' },
-    { name: 'Dinosaur 4', img: 'assets/icon-alt.png' },
-    { name: 'Racing Car 5', img: 'assets/icon-racing-car.png' },
-    { name: 'Dinosaur 5', img: 'assets/icon-alt.png' },
-    { name: 'Racing Car 6', img: 'assets/icon-racing-car.png' },
-    { name: 'Dinosaur 6', img: 'assets/icon-alt.png' },
-    { name: 'Racing Car 7', img: 'assets/icon-racing-car.png' },
-  ];
-  static COZEE_COLORS = [
-    { name: 'Indigo', css: 'rgb(44,58,118)' },
-    { name: 'Sage', css: 'rgb(166,196,186)' },
-    { name: 'Dark Grey', css: 'rgb(78,78,78)' },
-    { name: 'Powder Blue', css: 'rgb(84,128,180)' },
-    { name: 'Light Grey', css: 'rgb(200,200,200)' },
-    { name: 'Hot Pink', css: 'rgb(214,62,140)' },
-    { name: 'Oatmeal', css: 'rgb(225,212,192)' },
-    { name: 'Blue and White', css: 'linear-gradient(135deg, rgb(33,56,104) 50%, #fff 50%)' },
-    { name: 'Pink and White', css: 'linear-gradient(135deg, rgb(226,120,160) 50%, #fff 50%)' },
-    { name: 'Tie-Dye', css: 'linear-gradient(135deg, rgb(238,170,210) 0%, rgb(200,170,230) 35%, rgb(160,210,230) 65%, rgb(245,190,215) 100%)', textOnly: true, preview: 'assets/preview-tie-dye.png' },
-  ];
-  static SHERPA_COLORS = [
-    { name: 'Powder Blue', css: 'rgb(150,184,220)' },
-    { name: 'Cream Sherpa', css: 'rgb(240,234,222)' },
-    { name: 'Pink Sherpa', css: 'rgb(236,196,204)' },
-    { name: 'Sage', css: 'rgb(186,204,190)' },
-    { name: 'Grey Sherpa', css: 'rgb(190,190,190)' },
-    { name: 'Hot Pink', css: 'rgb(222,90,155)' },
-    { name: 'Royal Blue', css: 'rgb(40,80,170)' },
-    { name: 'Rose', css: 'rgb(196,130,140)' },
-  ];
-  static GALLERY = [
-    { label: 'Lifestyle photo', img: 'assets/gallery-lifestyle.png' },
-    { label: 'Front view', img: 'assets/gallery-front.png' },
-    { label: 'Left angle', img: 'assets/gallery-left.png' },
-    { label: 'Right angle', img: 'assets/gallery-right.png' },
-  ];
-  static STYLES = [
-    { id: 'cozee', name: 'Cozee Chair', thumb: 'assets/fabric-1.png', preview: 'assets/preview-chair.png',
-      basePrice: 99.99, personalization: { text: true, icon: true }, colors: Component.COZEE_COLORS,
-      threadColors: [{ name: 'White', css: '#FAFAFA' }, { name: 'Silver', css: 'rgb(196,196,196)' }, { name: 'Navy', css: 'rgb(26,58,108)' }, { name: 'Rose', css: 'rgb(166,90,84)' }],
-      priceOverrides: [{ match: { color: 'Dark Grey' }, price: 109.99 }, { match: { color: 'Light Grey' }, price: 109.99 }] },
-    { id: 'sherpa', name: 'Cozee Sherpa Chair', thumb: 'assets/fabric-2.png', preview: 'assets/preview-chair.png',
-      basePrice: 119.99, personalization: { text: true, icon: true }, colors: Component.SHERPA_COLORS,
-      threadColors: [{ name: 'White', css: '#FAFAFA' }, { name: 'Gold', css: 'rgb(196,160,72)' }, { name: 'Blush', css: 'rgb(226,160,172)' }, { name: 'Navy', css: 'rgb(26,58,108)' }],
-      priceOverrides: [{ match: { color: 'Pink Sherpa' }, price: 129.99 }] },
-  ];
-  static FUTURE = [
-    { id: 'rocker', name: 'Cozee Rocker', sample: true, preview: 'assets/preview-chair.png', basePrice: 129.99, personalization: { text: true, icon: true }, colors: Component.COZEE_COLORS.slice(0, 6), threadColors: Component.STYLES[0].threadColors, priceOverrides: [] },
-    { id: 'lounger', name: 'Cozee Lounger', sample: true, preview: 'assets/preview-chair.png', basePrice: 89.99, personalization: { text: true, icon: false }, colors: Component.SHERPA_COLORS.slice(0, 5), threadColors: Component.STYLES[1].threadColors, priceOverrides: [] },
-    { id: 'glider', name: 'Cozee Glider', sample: true, preview: 'assets/preview-chair.png', basePrice: 149.99, personalization: { text: true, icon: true }, colors: Component.COZEE_COLORS.concat(Component.SHERPA_COLORS), threadColors: Component.STYLES[0].threadColors, priceOverrides: [{ match: { color: 'Dark Grey' }, price: 159.99 }] },
-    { id: 'mini', name: 'Cozee Mini', sample: true, preview: 'assets/preview-chair.png', basePrice: 79.99, personalization: { text: true, icon: false }, colors: Component.COZEE_COLORS.slice(0, 4), threadColors: Component.STYLES[1].threadColors, priceOverrides: [] },
-  ];
+</main>
 
-  constructor(props) {
-    super(props);
-    const s2 = (props.startStep ?? 1) === 2;
-    this.state = { styleId: s2 ? 'cozee' : null, color: s2 ? 'Blue and White' : null, step: s2 ? 2 : 1, reached2: s2, view: 0, iconOn: true, textOn: true, icon: null, text: '', threadColor: 'White', font: 'Goudy Bold', qty: 1, added: false, notice: '', hero: 0, w: typeof window !== 'undefined' ? window.innerWidth : 1360 };
-  }
-  rootRef = React.createRef(); stepsRef = React.createRef(); cardRef = React.createRef();
-  componentDidMount() {
-    const el = this.rootRef.current;
-    if (el && window.ResizeObserver) { this._ro = new ResizeObserver(([e]) => { const w = Math.round(e.contentRect.width); if (w !== this.state.w) this.setState({ w }); }); this._ro.observe(el); }
-  }
-  componentWillUnmount() { this._ro && this._ro.disconnect(); }
-  findStyle(id) { const all = Component.STYLES.concat(Component.FUTURE); return all.find(x => x.id === id) || all[0]; }
-  priceFor(st, sel) { const o = st.priceOverrides.find(o => Object.keys(o.match).every(k => sel[k] === o.match[k])); return o ? o.price : st.basePrice; }
-  minPrice(st) { return Math.min(st.basePrice, ...st.priceOverrides.map(o => o.price)); }
-  fmt(n) { return '$' + n.toFixed(2); }
-  tog(on) {
-    return {
-      box: { flex: 1, height: 48, borderRadius: 8, background: on ? 'rgb(239,244,251)' : 'rgb(250,250,250)', display: 'flex', alignItems: 'center', gap: 8, padding: '12px 8px', boxSizing: 'border-box', cursor: 'pointer', userSelect: 'none' },
-      track: { position: 'absolute', left: 3, top: 3, width: 32, height: 18, borderRadius: 40, background: on ? 'rgb(53,117,202)' : 'rgb(142,142,142)', transition: 'background 160ms' },
-      knob: { position: 'absolute', left: on ? 19 : 5, top: 5, width: 14, height: 14, borderRadius: '50%', background: '#fff', transition: 'left 160ms cubic-bezier(.4,0,.2,1)' },
-      label: { flex: 1, fontWeight: 700, fontSize: 12, lineHeight: 1.4, textTransform: 'uppercase', color: on ? 'rgb(53,117,202)' : 'rgb(102,102,102)' },
-    };
-  }
-  goStep(n) {
-    this.setState(n === 2 ? { step: n, reached2: true } : { step: n });
-    const el = this.stepsRef.current;
-    if (el) setTimeout(() => {
-      const top = el.getBoundingClientRect().top + window.scrollY - (this.state.w < 900 ? 56 + 268 : 16);
-      if (el.getBoundingClientRect().top < 0 || this.state.w < 900) window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
-    }, 30);
-  }
-  selectStyle(id) {
-    this.setState(p => {
-      if (p.styleId === id) return null;
-      const st = this.findStyle(id);
-      const okColor = !!p.color && st.colors.some(c => c.name === p.color);
-      const okThread = st.threadColors.some(c => c.name === p.threadColor);
-      const msgs = [];
-      if (p.color && !okColor) msgs.push(p.color + ' isn’t offered for the ' + st.name + ' — pick a new color');
-      if (!okThread && p.styleId) msgs.push('text color reset to ' + st.threadColors[0].name);
-      const notice = msgs.length ? msgs.join('; ').replace(/^./, m => m.toUpperCase()) + '.' : '';
-      return { styleId: id, color: okColor ? p.color : null, threadColor: okThread ? p.threadColor : st.threadColors[0].name, icon: p.icon, notice };
-    });
-  }
-  renderVals() {
-    const s = this.state;
-    const m = s.w < 900;
-    const maxChars = this.props.maxChars ?? 10;
-    const styles = (this.props.previewSixStyles ?? false) ? Component.STYLES.concat(Component.FUTURE) : Component.STYLES;
-    const chosen = !!s.styleId;
-    const st = this.findStyle(s.styleId);
-    const FONTS = Component.FONTS, ICONS = Component.ICONS;
-    const selColor = chosen ? st.colors.find(c => c.name === s.color) : null;
-    const live = !s.view;
-    const livePreviewImg = (selColor && selColor.preview) || st.preview;
-    const perso = selColor ? (selColor.perso || (selColor.textOnly ? 'text' : 'both')) : 'both';
-    const colorTextOnly = perso === 'text';
-    const supportsIcon = (!chosen || !!st.personalization.icon) && perso !== 'text';
-    const supportsText = perso !== 'icon';
-    const iconOn = s.iconOn && supportsIcon, textOn = s.textOn && supportsText;
-    const optBox = (on, off) => ({ borderRadius: 8, padding: m ? '8px 12px 12px' : '8px 16px 16px', display: 'flex', flexDirection: 'column', gap: 12,
-      background: off ? 'rgb(250,250,250)' : '#fff',
-      boxShadow: on ? 'inset 0 0 0 2px rgb(142,178,225)' : 'inset 0 0 0 1px rgb(222,222,222)' });
-    const curFont = FONTS.find(f => f.name === s.font) || FONTS[0];
-    const curIcon = ICONS.find(i => i.name === s.icon);
-    const curTC = st.threadColors.find(c => c.name === s.threadColor) || st.threadColors[0];
-    const curColor = chosen ? st.colors.find(c => c.name === s.color) : null;
-    const hasText = !!s.text.trim();
-    const step1Ok = chosen && !!s.color;
-    const step = step1Ok ? s.step : 1;
-    const missing = [];
-    if (iconOn && !curIcon) missing.push('an icon');
-    if (textOn && !hasText) missing.push('your text');
-    const complete = step1Ok && !missing.length;
-    const chairPrice = s.color ? this.priceFor(st, { color: s.color }) : null;
-    const PERSO_FEE = 15;
-    const personalizing = step1Ok && !!s.reached2 && (iconOn || textOn);
-    const price = chairPrice != null ? chairPrice + (personalizing ? PERSO_FEE : 0) : null;
-    const priceLabel = price != null ? this.fmt(price) : 'From ' + this.fmt(chosen ? this.minPrice(st) : Math.min(...Component.STYLES.map(x => this.minPrice(x))));
-    const delta = chairPrice != null ? chairPrice - st.basePrice : 0;
-    const ring = on => on ? 'inset 0 0 0 2px rgb(53,117,202)' : 'inset 0 0 0 1px rgb(174,200,234)';
-    const showIcon = iconOn && !!curIcon;
-    const nav = (arr, dd) => arr.map(l => ({ label: l, dd: dd.includes(l) }));
-    const pad = m ? 16 : 50;
-    const tab = (n, kicker, label, active, done, onClick, disabled) => ({
-      n, kicker, label, done, notDone: !done, onClick, locked: !!disabled, unlocked: !disabled,
-      style: { display: 'flex', width: '100%', alignItems: 'center', gap: 10, minHeight: 56, padding: '8px 12px', borderRadius: 8, border: 'none', cursor: disabled ? 'not-allowed' : 'pointer', fontFamily: 'Poppins, sans-serif', textAlign: 'left',
-        background: active ? 'rgb(239,244,251)' : 'rgb(255,255,255)',
-        boxShadow: active ? 'inset 0 0 0 2px rgb(47,104,177)' : done ? 'inset 0 0 0 2px rgb(142,178,225)' : 'inset 0 0 0 1px rgb(198,198,198)',
-        color: active || done ? 'rgb(43,94,161)' : 'rgb(134,134,134)' },
-      dot: { width: 24, height: 24, borderRadius: 48, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 12,
-        background: done ? 'rgb(43,94,161)' : active ? 'rgb(53,117,202)' : 'rgb(222,222,222)', color: active || done ? '#fff' : 'rgb(102,102,102)' },
-    });
-    return {
-      rootRef: this.rootRef, stepsRef: this.stepsRef, cardRef: this.cardRef,
-      buyLabel: complete ? (s.added ? 'Added To Cart' : 'Add To Cart') : (step1Ok || chosen ? 'Continue Personalizing' : 'Start Personalizing'),
-      buyAction: () => {
-        if (complete) return this.setState({ added: true });
-        const el = this.cardRef.current; if (!el) return;
-        const top = el.getBoundingClientRect().top + window.scrollY - (m ? 56 : 16);
-        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
-      },
-      isMobile: m, isDesktop: !m,
-      L: {
-        heroTrack: { display: 'flex', height: m ? 334 : 459, overflowX: 'auto', scrollSnapType: m ? 'x mandatory' : 'none', scrollbarWidth: 'none' },
-        titleRow: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, padding: m ? '20px 16px 0' : '24px 50px 0', maxWidth: m ? 'none' : 775, boxSizing: 'border-box' },
-        card: m ? { display: 'flex', flexDirection: 'column', gap: 16, marginTop: 20 }
-                : { margin: '31px 47px 0 50px', borderRadius: 8, background: '#fff', boxShadow: 'inset 0 0 0 1px rgb(198,198,198)', padding: 24, display: 'flex', gap: 32, alignItems: 'flex-start' },
-        previewRow: { display: 'flex', gap: m ? 8 : 12, alignItems: 'flex-start' },
-        thumbCol: { display: 'flex', flexDirection: 'column', gap: m ? 6 : 8, flexShrink: 0, maxHeight: m ? 230 : 485, overflowY: 'auto', scrollbarWidth: 'none' },
-        previewCol: m ? { position: 'sticky', top: 56, zIndex: 3, background: 'rgb(250,250,250)', padding: '8px 16px 8px', display: 'flex', flexDirection: 'column', gap: 6, boxShadow: '0 8px 12px -10px rgba(0,0,0,0.15)' }
-                      : { flex: '1 1 0', minWidth: 0, position: 'sticky', top: 16, display: 'flex', flexDirection: 'column', gap: 16, padding: '0 8px' },
-        stepsCol: m ? { padding: '0 16px', display: 'flex', flexDirection: 'column', gap: 24 } : { flex: '0 0 478px', display: 'flex', flexDirection: 'column', gap: 24 },
-        styleGrid: { display: 'grid', gridTemplateColumns: m ? '1fr' : 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 },
-        iconGrid: { display: 'grid', gridTemplateColumns: 'repeat(5, minmax(0,1fr))', gap: m ? 8 : 10 },
-        below: m ? { display: 'flex', flexDirection: 'column', gap: 24, padding: '40px 16px 0' } : { display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 478px', gap: 57, alignItems: 'start', padding: '59px 47px 0 50px' },
-        buyBox: m ? { display: 'flex', flexDirection: 'column', gap: 24 } : { borderRadius: 8, background: '#fff', boxShadow: 'inset 0 0 0 1px rgb(198,198,198)', padding: 24, display: 'flex', flexDirection: 'column', gap: 24 },
-        buyInner: { padding: m ? 0 : 24, display: 'flex', flexDirection: 'column', gap: 16 },
-      },
-      P: {
-        box: { flex: 1, minWidth: 0, position: 'relative', height: m ? 230 : 485, borderRadius: 8, boxShadow: 'inset 0 0 0 1px rgb(207,222,242)', overflow: 'hidden', background: '#fff', backgroundImage: 'url(' + (live ? livePreviewImg : Component.GALLERY[s.view - 1].img) + ')', backgroundPosition: 'center', backgroundSize: 'contain', backgroundRepeat: 'no-repeat' },
-        icon: { position: 'absolute', left: '50%', top: m ? 44 : 98, transform: 'translateX(-50%)', width: m ? 34 : 63, height: m ? 21 : 38, backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundImage: curIcon ? 'url(' + curIcon.img + ')' : 'none' },
-        text: { position: 'absolute', left: 0, right: 0, top: m ? (showIcon ? 62 : 50) : (showIcon ? 136 : 110), textAlign: 'center', fontSize: m ? 22 : 40, lineHeight: 1.5, letterSpacing: '0.15px', fontFamily: curFont.family, fontWeight: curFont.weight, fontStyle: curFont.italic ? 'italic' : 'normal', color: curTC.name === 'White' ? '#fff' : curTC.css },
-      },
-      showIcon: showIcon && live, showText: live && textOn && (step === 2 || hasText), mobileLive: m && live,
-      thumbs: [{ label: 'Preview', img: livePreviewImg, live: true }].concat(Component.GALLERY).map((g, i) => ({ label: g.label, live: !!g.live, on: s.view === i,
-        onClick: () => this.setState({ view: i }),
-        style: { width: m ? 40 : 72, height: m ? 40 : 72, flexShrink: 0, position: 'relative', padding: 0, border: 'none', cursor: 'pointer', borderRadius: 8, overflow: 'hidden',
-          backgroundColor: '#fff', backgroundImage: 'url(' + g.img + ')', backgroundSize: g.live ? 'contain' : 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat',
-          boxShadow: s.view === i ? 'inset 0 0 0 2px rgb(53,117,202)' : 'inset 0 0 0 1px rgb(207,222,242)' },
-        tag: { position: 'absolute', left: 0, right: 0, bottom: 0, background: 'rgba(43,94,161,0.92)', color: '#fff', fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: m ? 7 : 9, lineHeight: m ? '12px' : '16px', letterSpacing: m ? '0.04em' : '0.08em', textTransform: 'uppercase', textAlign: 'center' } })),
-      previewText: s.text.trim() || 'Name',
+<nav class="proto-switch" aria-label="Prototype pages">
+  <a href="index.html" aria-current="page">Regular PDP</a>
+  <a href="open-box.html">Open Box (with New)</a>
+  <a href="open-box.html?variant=open-box-only">Open Box Only</a>
+</nav>
 
-      topLinks: nav(['About Us', 'Safety', 'Here To Help', 'Crib Conversions', 'Parenting Tips', 'What’s New', 'Gifts'], ['About Us', 'Safety', 'Here To Help', 'Crib Conversions']),
-      catLinks: nav(['Nursery', 'Kid’s Bedroom', 'Play & Outdoor', 'Strollers', 'Waggons', 'Baby Gear', 'Mattresses', 'Bedding', 'Accessories', 'Personalization'], ['Nursery', 'Kid’s Bedroom', 'Play & Outdoor', 'Baby Gear', 'Mattresses', 'Bedding', 'Accessories']),
-      heroImages: ['hero-1', 'hero-2', 'hero-3', 'hero-4', 'hero-5'].map(h => ({ style: { flex: m ? '0 0 100%' : '0 0 716px', height: m ? 334 : 459, scrollSnapAlign: 'start', backgroundImage: 'url(' + {'hero-1':'assets/hero-1.png','hero-2':'assets/hero-2.png','hero-3':'assets/hero-3.png','hero-4':'assets/hero-4.png','hero-5':'assets/hero-5.png'}[h] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'rgb(239,239,239)' } })),
-      heroDots: [0, 1, 2, 3, 4].map(i => ({ op: i === s.hero ? 1 : 0.55 })),
-      onHeroScroll: e => { const i = Math.round(e.currentTarget.scrollLeft / (e.currentTarget.clientWidth || 1)); if (m && i !== s.hero) this.setState({ hero: i }); },
-
-      productTitle: 'Personalized ' + (chosen ? st.name : 'Cozee Chair') + ' for Kids',
-      priceLabel,
-
-      tipProps: { style: { display: 'flex', width: '100%' } },
-      stepTabs: [
-        tab(1, 'step 1', 'Fabric & Color', step === 1, step1Ok && step !== 1, () => this.goStep(1), false),
-        tab(2, 'step 2', 'Personalize', step === 2, complete && step !== 2, () => { if (step1Ok) this.goStep(2); }, !step1Ok),
-      ],
-      onStep1: step === 1, onStep2: step === 2,
-
-      chosen, notChosen: !chosen,
-      styleName: chosen ? st.name : 'Select',
-      styles: styles.map(x => ({ name: x.name, bg: x.thumb ? 'url(' + x.thumb + ')' : 'none',
-        tint: (chosen && x.id === st.id && curColor) ? curColor.css : 'rgb(255,255,255)', ring: chosen && x.id === st.id ? '0 0 0 2px rgb(53,117,202)' : 'inset 0 0 0 1px rgb(174,200,234)',
-        price: (x.priceOverrides.length ? 'From ' : '') + this.fmt(this.minPrice(x)),
-        sample: !!x.sample,
-        capsColor: x.sample ? 'rgb(142,142,142)' : 'rgb(43,94,161)', onClick: () => this.selectStyle(x.id) })),
-      colorLabel: chosen ? (s.color || 'Select') : 'Select Fabric First',
-      hasColorTag: delta > 0.001, colorTag: '+' + this.fmt(delta),
-      hasNotice: !!s.notice, notice: s.notice,
-      colors: st.colors.map(c => ({ name: c.name, css: c.css, available: c.available !== false, ring: s.color === c.name ? '0 0 0 3px rgb(142,178,225)' : 'none',
-        onClick: () => this.setState({ color: c.name, notice: '', view: 0 }) })),
-      step1Blocked: !step1Ok,
-      step1Cta: !chosen ? 'Select a Fabric' : !s.color ? 'Select a Color' : 'Next: Personalize (+' + this.fmt(PERSO_FEE) + ')',
-      goStep2: () => { if (!step1Ok) return; if (!s.iconOn && !s.textOn) this.setState({ iconOn: true, textOn: true }); this.goStep(2); },
-      skipPerso: () => { if (!step1Ok) return; this.setState({ iconOn: false, textOn: false }); this.goStep(2); },
-      skipStyle: { border: 'none', background: 'none', height: 44, padding: '0 8px', fontFamily: 'Poppins, sans-serif', fontWeight: 600, fontSize: 14, textDecoration: 'underline', textUnderlineOffset: 3,
-        cursor: step1Ok ? 'pointer' : 'not-allowed', color: step1Ok ? 'rgb(53,117,202)' : 'rgb(174,200,234)' },
-      chairPriceLabel: chairPrice != null ? this.fmt(chairPrice) : '',
-      hasColorUpcharge: delta > 0.001,
-      colorUpchargeMsg: (s.color || '') + ' is a premium color: +' + this.fmt(delta) + ' over the ' + this.fmt(st.basePrice) + ' base price.',
-      persoFeeLabel: personalizing ? '+' + this.fmt(PERSO_FEE) : 'Not added',
-      goStep1: () => this.goStep(1),
-      chosenSwatch: curColor ? curColor.css : 'rgb(222,222,222)',
-
-      supportsIcon, iconOn, textOn, bothOn: iconOn && textOn, noneOn: !iconOn && !textOn,
-      iconUnsupported: !supportsIcon, iconUnsupportedMsg: colorTextOnly ? ('Icons aren’t available for ' + s.color + '.') : ('Icons aren’t available on the ' + st.name + '.'),
-      colorTextOnly, colorTextOnlyMsg: s.color + ' can be personalized with text only. Pick another color to add an icon.',
-      hasPersoBadge: !!selColor, persoBadge: ({ both: 'Icon + Text', text: 'Text only', icon: 'Icon only' })[perso], persoTone: perso === 'both' ? 'tint' : 'neutral',
-      persoRestricted: !!selColor && perso !== 'both',
-      persoMsg: perso === 'text' ? s.color + ' can be personalized with text only.' : s.color + ' can be personalized with an icon only.',
-      textUnsupported: !supportsText, textUnsupportedMsg: s.color + ' is available with an icon only. Pick another color to add text.',
-      iconDisabled: !supportsIcon, textDisabled: !supportsText,
-      setIconOn: v => this.setState({ iconOn: !!v, view: 0 }), setTextOn: v => this.setState({ textOn: !!v, view: 0 }),
-      iconBox: optBox(iconOn, !supportsIcon), textBox: optBox(textOn, !supportsText),
-      toggleIcon: () => this.setState(p => ({ iconOn: !p.iconOn })),
-      toggleText: () => this.setState(p => ({ textOn: !p.textOn })),
-      ti: this.tog(iconOn), tt: this.tog(textOn),
-      iconLabel: s.icon || 'Select',
-      icons: ICONS.map(i => ({ name: i.name, bg: 'url(' + i.img + ')', ring: ring(s.icon === i.name), onClick: () => this.setState({ icon: i.name, view: 0 }) })),
-      text: s.text, maxChars, charsHint: '(' + maxChars + ' characters max · ' + (maxChars - s.text.length) + ' left)',
-      onTextChange: e => this.setState({ text: e.target.value.slice(0, maxChars), added: false, view: 0 }),
-      textColor: curTC.name,
-      textColors: st.threadColors.map(c => ({ name: c.name, css: c.css, ring: curTC.name === c.name ? '0 0 0 3px rgb(142,178,225)' : 'none', onClick: () => this.setState({ threadColor: c.name }) })),
-      font: s.font,
-      fonts: FONTS.map((f, i) => {
-        const on = s.font === f.name, last = i === FONTS.length - 1 && FONTS.length % 2;
-        return { name: f.name, onClick: () => this.setState({ font: f.name }), style: {
-          height: 44, borderRadius: 8, border: 'none', cursor: 'pointer', padding: '0 12px',
-          gridColumn: last ? '1 / span 2' : 'auto', justifySelf: last ? 'center' : 'stretch', width: last ? 'calc(50% - 6px)' : 'auto',
-          background: on ? 'rgb(250,250,250)' : '#fff',
-          boxShadow: on ? 'inset 0 0 0 2px rgb(53,117,202), 0 0 0 3px rgb(207,222,242)' : 'inset 0 0 0 2px rgb(198,198,198)',
-          color: on ? 'rgb(53,117,202)' : 'rgb(102,102,102)',
-          fontFamily: f.family, fontWeight: f.weight, fontStyle: f.italic ? 'italic' : 'normal', fontSize: 16, letterSpacing: '0.15px' } };
-      }),
-
-      hasMissing: !complete, buyMissingMsg: !step1Ok ? 'Complete Step 1 and Step 2 above to add to cart.' : 'Add ' + missing.join(' and ') + ' above to add to cart.', missingMsg: 'Add ' + missing.join(' and ') + ' to continue.',
-      cartBlocked: !complete, cartReady: complete,
-      cartLabel: s.added ? 'Added To Cart' : 'Add To Cart',
-      addToCart: () => { if (complete) this.setState({ added: true }); },
-      qty: s.qty, setQty: q => this.setState({ qty: q }),
-
-      features: ['greenguard gold certified', 'grows with baby', 'modern slick design', 'good for the environment', 'easy assembly'].map((l, i) => ({ label: l, leaf: i === 0 ? 'visible' : 'hidden' })),
-      infoTabs: [
-        { title: 'Description', content: 'Description content goes here.' },
-        { title: 'Product Details', content: 'Product details content goes here.' },
-        { title: 'Dimensions', content: 'Dimensions content goes here.' },
-        { title: 'Assembly Instructions', content: 'Assembly instructions content goes here.' },
-      ],
-    };
-  }
-}
-</script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
