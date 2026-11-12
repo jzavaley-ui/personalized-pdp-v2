@@ -1,0 +1,63 @@
+/* ============================================================
+   Delta Children — Typography tokens
+   Display type set in Luxenta; everything else in Poppins.
+   Size scale steps in multiples of 4 (brand rule).
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: "Luxenta", "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-accent: "Hanken Grotesk", "Poppins", -apple-system, sans-serif;
+
+  /* ---- Weights ---- */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* ---- Raw size ramp (px, +4 steps) ---- */
+  --size-10: 10px;
+  --size-12: 12px;
+  --size-14: 14px;
+  --size-16: 16px;
+  --size-18: 18px;
+  --size-20: 20px;
+  --size-22: 22px;
+  --size-24: 24px;
+  --size-28: 28px;
+  --size-32: 32px;
+  --size-40: 40px;
+  --size-44: 44px;
+  --size-64: 64px;
+  --size-84: 84px;
+
+  /* ---- Line heights ---- */
+  --leading-tight: 1;      /* display lockups */
+  --leading-snug: 1.2;
+  --leading-normal: 1.5;   /* body + UI default */
+
+  /* ---- Letter spacing ---- */
+  --tracking-eyebrow: 0.1em;   /* uppercase micro labels */
+  --tracking-label: 0.06em;    /* promo / sale strip */
+  --tracking-normal: 0;
+
+  /* ============================================================
+     Semantic roles — font shorthands (weight size/line family)
+     ============================================================ */
+  --type-hero:        var(--weight-regular) var(--size-84)/var(--leading-tight) var(--font-display);
+  --type-display-lg:  var(--weight-regular) var(--size-44)/var(--leading-snug) var(--font-display);
+  --type-display:     var(--weight-regular) var(--size-40)/var(--leading-snug) var(--font-display);
+  --type-section:     var(--weight-regular) var(--size-32)/var(--leading-snug) var(--font-display); /* section titles */
+  --type-title:       var(--weight-regular) var(--size-24)/var(--leading-snug) var(--font-display);
+  --type-card-title:  var(--weight-regular) var(--size-22)/var(--leading-snug) var(--font-display);
+
+  --type-eyebrow:     var(--weight-bold) var(--size-14)/var(--leading-normal) var(--font-body);
+  --type-body-lg:     var(--weight-regular) var(--size-18)/var(--leading-normal) var(--font-body);
+  --type-body:        var(--weight-regular) var(--size-16)/var(--leading-normal) var(--font-body);
+  --type-body-sm:     var(--weight-regular) var(--size-14)/var(--leading-normal) var(--font-body);
+  --type-button:      var(--weight-semibold) var(--size-16)/var(--leading-normal) var(--font-body);
+  --type-caption:     var(--weight-medium) var(--size-12)/var(--leading-normal) var(--font-body);
+  --type-micro:       var(--weight-medium) var(--size-10)/var(--leading-tight) var(--font-body);
+}
