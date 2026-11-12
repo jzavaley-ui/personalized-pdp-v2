@@ -1,14 +1,12 @@
-# Personalized Cozee Chair – Stepped PDP prototype (v2)
+# Personalized Cozee PDP – Stepped v2 (responsive prototype)
 
-Responsive clickable prototype of the Delta Children Personalized Cozee Chair product page.
-Desktop layout above 900px, mobile layout below.
+Exported from the "Customizable Chair Design" canvas on 2026-11-12.
 
-## Publish on GitHub Pages
-1. Create a repository and upload everything in this folder (`.nojekyll` is optional).
-2. Settings → Pages → Deploy from a branch → `main` / root.
-3. Open `https://<user>.github.io/<repo>/`.
+- `Personalized-Cozee-PDP-Stepped-v2.dc.html` – the responsive prototype (desktop and mobile in one file).
+- `Personalized-Cozee-PDP-Stepped-v2-Mobile.dc.html` – 390px wrapper that loads the prototype at phone width.
+- `index.html` – redirects to the prototype (handy for GitHub Pages).
+- `assets/` – every image and font the prototype uses (gallery, fabric photos, swatches, icons, Cursivo font).
+- `ds/deltachildrendesignsystem_6fc118/` – Delta Children design system stylesheets, components and Luxenta font.
+- `support.js` – the Design runtime the `.dc.html` files need.
 
-## Notes
-- Needs to be served over http(s); opening `index.html` straight from disk won't render.
-- React loads from unpkg.com at runtime; fonts load from Google Fonts.
-- Tie-Dye is the only text-only color; every other color supports icon + text.
+Serve the folder over HTTP (GitHub Pages, or `npx serve .` locally). Opening the files with `file://` won't load the components.
