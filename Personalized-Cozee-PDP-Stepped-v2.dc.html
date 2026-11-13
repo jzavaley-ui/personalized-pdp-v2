@@ -156,7 +156,7 @@ input::placeholder{color:rgb(198,198,198);}
               <sc-for list="{{ styles }}" as="st" hint-placeholder-count="2">
                 <div onClick="{{ st.onClick }}" style="display:flex;align-items:center;gap:16px;padding:8px 16px 8px 8px;border-radius:12px;cursor:pointer;background:rgb(255,255,255);box-shadow:{{ st.ring }};">
                   <div style="width:63px;height:63px;flex-shrink:0;border-radius:8px;overflow:hidden;position:relative;isolation:isolate;background:{{ st.tint }};box-shadow:inset 0 0 0 1px rgba(0,0,0,0.08);transition:background 200ms;">
-                    <div style="position:absolute;inset:0;background-size:cover;background-position:center;background-image:{{ st.bg }};filter:grayscale(1) brightness(1.7) contrast(0.85);mix-blend-mode:multiply;"></div>
+                    <div style="position:absolute;inset:0;background-size:cover;background-position:center;background-image:{{ st.bg }};filter:{{ st.fx }};mix-blend-mode:multiply;"></div>
                   </div>
                   <div style="flex:1;display:flex;flex-direction:column;gap:2px;min-width:0;">
                     <span style="font-weight:600;font-size:14px;line-height:1.4;color:rgb(54,54,54);">{{ st.name }}</span>
@@ -602,7 +602,7 @@ class Component extends DCLogic {
       chosen, notChosen: !chosen,
       styleName: chosen ? st.name : 'Select',
       styles: styles.map(x => ({ name: x.name, bg: x.thumb ? 'url(' + x.thumb + ')' : 'none',
-        tint: (chosen && x.id === st.id && curColor) ? curColor.css : 'rgb(255,255,255)', ring: chosen && x.id === st.id ? '0 0 0 2px rgb(53,117,202)' : 'inset 0 0 0 1px rgb(174,200,234)',
+        tint: (chosen && x.id === st.id && curColor) ? curColor.css : 'rgb(255,255,255)', fx: (chosen && x.id === st.id && curColor) ? 'grayscale(1) brightness(1.7) contrast(0.85)' : 'none', ring: chosen && x.id === st.id ? '0 0 0 2px rgb(53,117,202)' : 'inset 0 0 0 1px rgb(174,200,234)',
         price: this.fmt((chosen && x.id === st.id && s.color) ? this.priceFor(x, { color: s.color }) : x.basePrice),
         sample: !!x.sample,
         capsColor: x.sample ? 'rgb(142,142,142)' : 'rgb(43,94,161)', onClick: () => this.selectStyle(x.id) })),

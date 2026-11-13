@@ -1,6 +1,6 @@
 # Personalized Cozee PDP – Stepped v2 (responsive prototype)
 
-Exported from the "Customizable Chair Design" canvas on 2026-11-12.
+Exported from the "Customizable Chair Design" canvas on 2026-11-13.
 
 - `Personalized-Cozee-PDP-Stepped-v2.dc.html` – the responsive prototype (desktop and mobile in one file).
 - `Personalized-Cozee-PDP-Stepped-v2-Mobile.dc.html` – 390px wrapper that loads the prototype at phone width.
